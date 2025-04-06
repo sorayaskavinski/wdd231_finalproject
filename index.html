@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>WDD 231 final project - Turbo Manutenções e Reformas</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Homepage for Turbo Manutenções e Reformas, which will hold about us, contact form and information about the work that the professional does">
+        <meta name="author" content="Soraya Skavinski">
+        <meta property="og:title" content="Home Page">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://sorayaskavinski.github.io/wdd231_finalproject/images/logo.jpg">
+        <meta property="og:url" content="https://sorayaskavinski.github.io/wdd231_finalproject/index.html">
+        <link rel="preconnect" href="https://fonts.googleapis.com">       
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/base.css">  
+        <link rel="icon" href="logofav.ico">
+        <script src="scripts/base.js" defer></script>        
+    </head>
+    <body>
+        <header>
+            <div class="header-top">
+                <a href="index.html" title="home" target="_blank">         
+                    <img src="images/logo.jpg" alt="Logo" width="100">
+                </a>
+                <h1> Turbo Manutenções e Reformas</h1>
+            </div>
+            <div class="button-top">
+                <button class="menu-toggle">☰</button>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li class="active"><a href="index.html" title="home" target="_blank">Home</a></li>
+                        <li><a href="about.html" title="about us page" target="_blank">About Us</a></li>
+                        <li><a href="services.html" target="_blank" title="linkedin">Services</a></li> 
+                        <li><a href="contact.html" title="contact form" target="_blank">Contact</a></li> 
+                    </ul>                                               
+                </nav>
+            </div>            
+        </header>
+        <main>
+            <section class="hero">
+                <img src="images/hero.webp"  alt="marido de aluguel" class="hero-img">         
+                <div class="hero-text">
+                    <h2>Main Services provided</h2>
+                    <ul>
+                        <li> Electricity (circuit breaker, socket, light fixture)</li>
+                        <li> Painting (internal and external)</li>
+                        <li> Plumbing (tap, valve, shower, washing machine installation)</li>
+                        <li> Furniture assembly</li>
+                        <li> Installation and conversion of gas stove and heater (NG and LPG)</li>
+                        <li> Installation of tetra, digital and electronic locks</li>
+                        <li> Installation of curtains, pictures</li>
+                        <li> Installation and cleaning of air conditioning</li>
+                        <li> And much more.. </li>
+                    </ul>                        
+                </div>
+            </section>
+            <div id="home-columns">
+                <section class="home-left">
+                  <div class="region-box">
+                    <button id="show-btn">Region of Attendance</button>
+                    <div id="btn-container" class="hidden">
+                      <p>São Paulo Capital</p>
+                      <p>ABC Paulista</p>
+                    </div>
+                    <button id="contact" onclick="location.href='contact.html'">Contact Us</button>
+                  </div>
+                </section>              
+                <section class="home-right">
+                  <div id="carousel" class="carousel-container"></div>
+                </section>
+              </div>
+            
+        </main>
+        <footer>
+            <div id="first-footer-info">
+                <p><strong>Turbo Manutenções e Reformas</strong></p>           
+                <p>São Paulo, SP</p>
+                <p>fskavinski@gmail.com</p>
+                <p>
+                    <a href="https://wa.me/5511982192411?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank">
+                      +55 (11) 98219-2411
+                    </a>
+                </p>                  
+            </div>            
+            <nav id="footer-social">
+                <a href="https://wa.me/5511982192411?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank">
+                    <img src="images/whatsapp.webp" alt="WhatsApp logo">
+                </a>           
+                <a href="https://www.facebook.com/turbo.manutecoes" target="_blank">
+                    <img src="images/facebook-logo.webp" alt="Facebook logo">
+                </a>
+                <a href="https://www.instagram.com/fabio.assistenciaprofissional" target="_blank">
+                    <img src="images/instagram.webp" alt="Instagram logo">
+                </a>
+                <div>
+                    <p>&copy; <span id="year"></span> Turbo Manutenções</p>
+                    <p><span id="lastModified"></span></p>
+                </div>               
+            </nav>
+            
+            <div id="second-footer-info">
+                <p><strong>More Information:</strong></p>
+                <button id= "contact"onclick="location.href='contact.html'">Contact Us</button>
+                <button id= "services"onclick="location.href='services.html'">Services</button>           
+                
+            </div>
+            
+        </footer>
+    </body>
+</html>
