@@ -274,7 +274,8 @@ footer {
       }    
   
     .header-top img {
-      width: 40px;
+        text-align: center;
+        width: 40px;
     }
     
     .header-top h1{
