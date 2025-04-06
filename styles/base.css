@@ -327,3 +327,12 @@ footer {
       width: 100%;
     }
   }
+
+
+  @media (max-width: 600px) {
+    .header-top{
+        justify-content: center;
+        font-size: 18px;
+    }
+
+  }
