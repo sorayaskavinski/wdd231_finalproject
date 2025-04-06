@@ -248,8 +248,9 @@ footer {
 @media (max-width: 768px) {
     .nav-links{
         display: none;
-        flex-direction: column;    
-        width: 100%;
+        flex-direction: column;
+        gap: 10px;    
+        width: 80%;
         align-items: center;   
       }
     
@@ -263,25 +264,22 @@ footer {
       }
     
       .nav-links li a{
-        display: block;
+        display: block;       
         padding: 15px;    
       }
     
       .menu-toggle {
-        display: block;
-      } 
-      
-    .header-top {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+        display: inline-block;        
+       
+      }    
   
     .header-top img {
-      position: static;
-      margin-bottom: 10px;
+      width: 40px;
     }
-  
+    
+    .header-top h1{
+        font-size: 20px;
+    }  
       
     #home-columns {
       flex-direction: column;
@@ -289,7 +287,7 @@ footer {
     }
   
     .home-left, .home-right {
-      width: 100%;
+      width: 95%;
       padding: 10px;
       height: auto;
     }
@@ -303,17 +301,25 @@ footer {
     }
   
     .hero-text {
-      position: static;
-      transform: none;
-      margin-top: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 15px;
+        position: absolute;        
+        transform: translate(-30%, -50%); 
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px; 
+        font-size: 12px;
+        color: var(--button-color);
+        border-radius: 14px;
+        width: 70%;
+        text-align: center;
     }
   
     footer {
       grid-template-columns: 1fr;
       text-align: center;
     }
+
+    #second-footer-info {
+          display: none;
+        }
   
     #btn-container {
       width: 100%;
