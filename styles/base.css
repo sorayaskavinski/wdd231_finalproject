@@ -331,8 +331,12 @@ footer {
 
   @media (max-width: 600px) {
     .header-top{
-        justify-content: center;
+        justify-items: center;        
+    }
+
+    .header-top h1{
         font-size: 18px;
+        text-align: center;
     }
 
   }
