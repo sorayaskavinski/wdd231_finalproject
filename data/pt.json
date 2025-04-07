@@ -1,0 +1,23 @@
+{
+  "siteTitle": "Turbo Manutenções e Reformas",
+  "home": "Home",
+  "aboutus": "Empresa",
+  "servicesBtn": "Serviços",
+  "contact": "Fale Conosco",
+  "mainServices": "Serviços Principais:",
+  "serviceList": [
+    "Eletricidade (disjuntor, tomada, luminária)",
+    "Pintura (interna e externa)",
+    "Hidráulica (torneira, válvula, chuveiro, instalação de máquina de lavar)",
+    "Montagem de móveis",
+    "Instalação e conversão de fogão e aquecedor (GN e GLP)",
+    "Instalação de fechaduras tetra, digitais e eletrônicas",
+    "Instalação de cortinas, quadros",
+    "Instalação e limpeza de ar condicionado",
+    "E muito mais..."
+  ],
+  "regionBtn": "Região de Atendimento",
+  "contactBtn": "Fale Conosco",
+  "contactFooter": "Fale Conosco",
+  "servicesFooter": "Serviços"
+}

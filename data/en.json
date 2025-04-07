@@ -1,0 +1,23 @@
+{
+  "siteTitle": "Turbo Maintenance and Repairs",
+  "home": "Home",
+  "aboutus": "About Us",
+  "servicesBtn": "Services",
+  "contact": "Contact Us",
+  "mainServices": "Main Services provided:",
+  "serviceList": [
+    "Electricity (circuit breaker, socket, light fixture)",
+    "Painting (internal and external)",
+    "Plumbing (tap, valve, shower, washing machine installation)",
+    "Furniture assembly",
+    "Installation and conversion of gas stove and heater (NG and LPG)",
+    "Installation of tetra, digital and electronic locks",
+    "Installation of curtains, pictures",
+    "Installation and cleaning of air conditioning",
+    "And much more.."
+  ],
+  "regionBtn": "Region of Attendance",
+  "contactBtn": "Contact Us",
+  "contactFooter": "Contact Us",
+  "servicesFooter": "Services"
+}

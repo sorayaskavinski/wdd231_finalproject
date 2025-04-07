@@ -13,64 +13,63 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">       
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/base.css">  
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet"   href="styles/home.css">
         <link rel="icon" href="logofav.ico">
-        <script src="scripts/base.js" defer></script>        
+        <script src="scripts/base.js" defer></script>
+        <script src="scripts/home.js" defer></script>
+       
     </head>
     <body>
         <header>
-            <div class="header-top">
+            <div class="language-switch">
+                <img src="images/br-flag.png" alt="Português" id="pt" class="lang-btn">
+                <img src="images/us-flag.jpeg" alt="English" id="en" class="lang-btn">
                 <a href="index.html" title="home" target="_blank">         
-                    <img src="images/logo.jpg" alt="Logo" width="100">
+                    <img id="logo" src="images/logo.jpg" alt="Logo" width="100">
                 </a>
-                <h1> Turbo Manutenções e Reformas</h1>
+            </div>
+            <div class="header-top">               
+                <h1 id="siteTitle"></h1>
             </div>
             <div class="button-top">
                 <nav class="main-nav"></nav>
                 <button class="menu-toggle">☰</button>                
                     <ul class="nav-links">
-                        <li class="active"><a href="index.html" title="home" target="_blank">Home</a></li>
-                        <li><a href="#" title="about us page" target="_blank">About Us</a></li>
-                        <li><a href="#" target="_blank" title="Services">Services</a></li> 
-                        <li><a href="#" title="contact form" target="_blank">Contact</a></li> 
+                        <li class="active"><a href="index.html" title="home" target="_blank" id="home"></a></li>
+                        <li><a href="#" title="about us page" target="_blank" id="aboutus"></a></li>
+                        <li><a href="#" target="_blank" title="services" id="servicesBtn"></a></li> 
+                        <li><a href="#" title="contact form" target="_blank" id="contact"></a></li> 
                     </ul>                                               
                 </nav>
-            </div>            
+            </div>   
         </header>
         <main>
+                   
+        
             <section class="hero">
                 <img src="images/hero.webp"  alt="marido de aluguel" class="hero-img">         
                 <div class="hero-text">
-                    <h2>Main Services provided</h2>
-                    <ul>
-                        <li> Electricity (circuit breaker, socket, light fixture)</li>
-                        <li> Painting (internal and external)</li>
-                        <li> Plumbing (tap, valve, shower, washing machine installation)</li>
-                        <li> Furniture assembly</li>
-                        <li> Installation and conversion of gas stove and heater (NG and LPG)</li>
-                        <li> Installation of tetra, digital and electronic locks</li>
-                        <li> Installation of curtains, pictures</li>
-                        <li> Installation and cleaning of air conditioning</li>
-                        <li> And much more.. </li>
+                    <h2 id="mainServices"></h2>
+                    <ul id="serviceList">                      
                     </ul>                        
                 </div>
             </section>
             <div id="home-columns">
                 <section class="home-left">
                   <div class="region-box">
-                    <button id="show-btn">Region of Attendance</button>
+                    <button id="regionBtn"></button>
                     <div id="btn-container" class="hidden">
                       <p>São Paulo Capital</p>
                       <p>ABC Paulista</p>
                     </div>
-                    <button id="contact" onclick="location.href='contact.html'">Contact Us</button>
+                    <button id="contactBtn" onclick="location.href='contact.html'"></button>
                   </div>
                 </section>              
                 <section class="home-right">
                   <div id="carousel" class="carousel-container"></div>
                 </section>
-              </div>
-            
+              </div>            
         </main>
         <footer>
             <div id="first-footer-info">
@@ -101,8 +100,8 @@
             
             <div id="second-footer-info">
                 <p><strong>More Information:</strong></p>
-                <button id= "contact"onclick="location.href='contact.html'">Contact Us</button>
-                <button id= "services"onclick="location.href='services.html'">Services</button>           
+                <button id= "contactFooter"onclick="location.href='contact.html'"></button>
+                <button id= "servicesFooter"onclick="location.href='services.html'"></button>           
                 
             </div>
             

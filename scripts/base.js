@@ -1,3 +1,46 @@
+//Languages button
+function loadLanguage(lang) {
+  fetch(`data/${lang}.json`)
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById("siteTitle").textContent = data.siteTitle;
+          document.getElementById("home").textContent = data.home;
+          document.getElementById("aboutus").textContent = data.aboutus;
+          document.getElementById("servicesBtn").textContent = data.servicesBtn;
+          document.getElementById("contact").textContent = data.contact;
+          document.getElementById("mainServices").textContent = data.mainServices;
+          
+          const serviceList = document.getElementById("serviceList");
+          serviceList.innerHTML = "";
+          data.serviceList.forEach(item => {
+              const li = document.createElement("li");
+              li.textContent = item;
+              serviceList.appendChild(li);
+          });
+
+          document.getElementById("regionBtn").textContent = data.regionBtn;
+          document.getElementById("contactBtn").textContent = data.contactBtn;
+          document.getElementById("contactFooter").textContent = data.contactFooter;
+          document.getElementById("servicesFooter").textContent = data.servicesFooter;
+      })
+      .catch(error => console.error("Erro ao carregar idioma:", error));
+}
+
+// Click on flags
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+      const lang = btn.id; // 'pt' ou 'en'
+      loadLanguage(lang);
+  });
+});
+
+// Pattern English
+window.addEventListener("load", () => {
+  loadLanguage("en");
+});
+
+
+
 // Lastmodified and menu button function
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
@@ -13,36 +56,3 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
   });
 
-
-//hide map in the button - Region of Attendance
-const button = document.getElementById('show-btn');
-const mapContainer = document.getElementById('btn-container');
-  
-  button.addEventListener('click', () => {
-    mapContainer.classList.toggle('hidden');
-  });
-
-// carousel pictures
-fetch('data/carousel-images.json')
-  .then(respose => respose.json())
-  .then(images => {
-    const carousel = document.getElementById('carousel');
-    let currentIndex = 0;
-
-    //get the img just once
-    const img = document.createElement('img');
-    img.src = images [currentIndex].src;
-    img.alt = images [currentIndex].alt;
-    carousel.appendChild(img);
-
-    //function to change pictures
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      img.src = images[currentIndex].src;
-      img.alt = images[currentIndex].alt;
-    }, 3000); //changes at every 3 seconds
-  })
-  .catch(error => {
-    console.error("Failed to load carousel images:", error);
-  });
-  
