@@ -9,6 +9,13 @@ function loadLanguage(lang) {
           document.getElementById("aboutus").textContent = data.aboutus;
           document.getElementById("servicesBtn").textContent = data.servicesBtn;
           document.getElementById("contact").textContent = data.contact;
+        //Footer base elements
+          document.getElementById("titleFooter").textContent = data.titleFooter;
+          document.getElementById("moreInfo").textContent = data.moreInfo;
+          document.getElementById("contactFooter").textContent = data.contactFooter;
+          document.getElementById("servicesFooter").textContent = data.servicesFooter;
+          document.getElementById("lastTitle").textContent = data.lastTitle;
+
 //homepage elements
           document.getElementById("mainServices").textContent = data.mainServices;
           
@@ -21,13 +28,7 @@ function loadLanguage(lang) {
           });
 
           document.getElementById("regionBtn").textContent = data.regionBtn;
-          document.getElementById("contactBtn").textContent = data.contactBtn;
- //Footer base elements
-          document.getElementById("titleFooter").textContent = data.titleFooter;
-          document.getElementById("moreInfo").textContent = data.moreInfo;
-          document.getElementById("contactFooter").textContent = data.contactFooter;
-          document.getElementById("servicesFooter").textContent = data.servicesFooter;
-          document.getElementById("lastTitle").textContent = data.lastTitle;
+          document.getElementById("contactBtn").textContent = data.contactBtn; 
       })
       .catch(error => console.error("Erro ao carregar idioma:", error));
 }

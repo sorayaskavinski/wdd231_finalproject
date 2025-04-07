@@ -106,7 +106,6 @@ header{
     padding: 5px;
 }
 
-
 /*footer*/  
 footer {
     display: grid;
@@ -125,6 +124,8 @@ footer {
     font-size: 12px;    
 }
 
+/* Footer Social */
+
 #footer-social {
     display: block;
     flex-direction: row;
@@ -141,23 +142,30 @@ footer {
     padding-right:10px;
     padding-left: 10px;
 }
-
-#services{      
-    border-radius: 10px;
-    margin-top: 10%;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    font-size: 18px;
-    box-shadow: -10px 10px 20px #000;  
-    transition: transform 0.3s ease;
-    padding: 10px;
-    border: #ffff;
-}
-
+/* Second footer buttons */
 #second-footer-info{
     display: grid;
     font-size: 12px;    
 }
+
+
+#contactBtn, #servicesFooter, #contactFooter {
+    display: block;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -10px 10px 20px #000;  
+    transition: transform 0.3s ease;
+    cursor: pointer;    
+  }
+#servicesFooter:hover,  #contactBtn:hover, #contactFooter:hover {
+    background-color: #ea8007;
+} 
+
 
 
 /*responsive*/
