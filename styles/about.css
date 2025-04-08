@@ -1,0 +1,144 @@
+:root{
+    --primary-color: #072188;  /* headings, callout background */
+    --secondary-color: #f3ede1 ; /* footer, longer text background */
+    --button-color:  #ffff; /* button, text when in primary-color */
+    --text-color: #000;  /* text when in secondary-color */ 
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100vw;
+    margin: auto;    
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;  
+}
+
+.company{    
+    position: relative;
+    width: 100%;    
+    overflow: hidden;
+}
+.company-img{
+    width:100%;
+    height: auto;    
+    object-fit: cover;  
+    display: block;
+}
+
+.company-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-19%, -65%); 
+  color: var(--text-color);
+  text-align: center;  
+  padding: 20px;
+  border-radius: 12px;
+  width: 58%;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.company-text h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.professional {
+    display: flex;     
+    overflow: hidden;
+    gap: 20px;
+}
+
+.professional-img{
+    width:405px;
+    max-width: 100%;
+    height: auto; 
+    padding-top: 5px;    
+    box-shadow: -5px 10px 20px black;     
+}
+
+.professional-text{
+    width: 58%;
+    padding: 20px;
+    color: var(--button-color);
+    background-color: rgba(7, 33, 136, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.professional-text h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+/*RESPONSIVE */
+@media screen and (max-width: 768px){
+   
+    .company {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+    
+      .company-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    
+      .company-text {
+        position: static;
+        transform: none;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: left;
+        color: var(--button-color);
+        margin-top: 10px;
+      }
+    
+      .company-text h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+    .professional {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .professional-text, .professional-img {
+        width: 90%;
+        margin: 10px 0;
+        font-size: 12px;
+      }
+
+      .professional-text h2{
+        font-size: 18px;
+      }
+    
+      .professional-img {
+        margin-left: 0;
+        box-shadow: none;
+        order: 1;
+      } 
+
+      .professional-text{
+        order: 2;
+      }
+    
+}

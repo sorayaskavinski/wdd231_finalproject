@@ -1,3 +1,39 @@
+//Languages of HomePage
+function loadLanguage(lang) {
+  fetch(`data/${lang}.json`)
+      .then(response => response.json())
+      .then(data => {
+  //base head elements
+          document.getElementById("siteTitle").textContent = data.siteTitle;
+          document.getElementById("home").textContent = data.home;
+          document.getElementById("aboutus").textContent = data.aboutus;
+          document.getElementById("servicesBtn").textContent = data.servicesBtn;
+          document.getElementById("contact").textContent = data.contact;
+        //Footer base elements
+          document.getElementById("titleFooter").textContent = data.titleFooter;
+          document.getElementById("moreInfo").textContent = data.moreInfo;
+          document.getElementById("contactFooter").textContent = data.contactFooter;
+          document.getElementById("servicesFooter").textContent = data.servicesFooter;
+          document.getElementById("lastTitle").textContent = data.lastTitle;
+          document.getElementById("regionBtn").textContent = data.regionBtn;
+          document.getElementById("contactBtn").textContent = data.contactBtn;  
+
+  //homepage language elements
+          document.getElementById("mainServices").textContent = data.mainServices;
+          
+          const serviceList = document.getElementById("serviceList");
+          serviceList.innerHTML = "";
+          data.serviceList.forEach(item => {
+              const li = document.createElement("li");
+              li.textContent = item;
+              serviceList.appendChild(li);
+          });
+           
+      })
+      .catch(error => console.error("Erro ao carregar idioma:", error));
+}
+
+
 //hide Region of Attendance
 const button = document.getElementById('regionBtn');
 const mapContainer = document.getElementById('btn-container');
@@ -28,5 +64,5 @@ fetch('data/carousel-images.json')
   })
   .catch(error => {
     console.error("Failed to load carousel images:", error);
-  });
+  });  
   
