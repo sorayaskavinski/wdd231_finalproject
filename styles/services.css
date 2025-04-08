@@ -54,7 +54,7 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     color: var(--button-color);
     text-align: center;
     font-weight: bold;
