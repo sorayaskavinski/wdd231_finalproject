@@ -30,5 +30,26 @@
   "aboutProfessional": "About the Professional",
   "aboutProfessionalText1": "Leading Turbo Manutenções is a professional who is truly passionate about his work. With a careful eye and an unwavering commitment to quality, each service is delivered with care, cleanliness, and attention to detail.",
   "aboutProfessionalText2": "He holds several certifications from SENAI and is always looking to improve his skills. He is currently enrolled in a Specilist Electrician course at Obramax and a Specialized Gas course at SENAI, expanding his knowledge to deliver safe and specialized services.",
-  "aboutProfessionalText3": "His greatest asset goes beyond technical skill: he constantly seeks to innovate, carefully selects high-quality materials, and is committed to delivering not just excellent service, but the trust that your home is being cared for as if it were his own."
+  "aboutProfessionalText3": "His greatest asset goes beyond technical skill: he constantly seeks to innovate, carefully selects high-quality materials, and is committed to delivering not just excellent service, but the trust that your home is being cared for as if it were his own.",
+  "captionEletrico": "Electrical Services",
+  "servicosEletricos": "Electrical Services",
+  "servicosEletricosList": [
+    "Installation of sockets and switches",    
+    "Installation of lighting fixtures",
+    "Installation of ceiling fans",
+    "Installation of electrical showers",
+    "Wiring maintenance",    
+    "Replacement of circuit breakers",
+    "Technical inspections"],
+  "captionHidra": "Hidraulic Services",
+  "hidraServices": "Hidraulic Services",
+  "hidraServiceList": [
+    "Leak repair",
+    "Faucet installation",
+    "Water filter installation",
+    "Washing machine installation",
+    "Record maintenance",
+    "Simple unclogging",
+    "Water tank float replacement",
+    "Water tank cleaning"]
 }

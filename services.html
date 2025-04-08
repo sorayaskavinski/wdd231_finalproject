@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet"   href="styles/services.css">
         <link rel="icon" href="logofav.ico"> 
+        <script src="scripts/base.js" defer></script>
+        <script src="scripts/services.js" defer></script>
     </head>
     <body>
         <header>
@@ -41,7 +43,53 @@
             </div>   
         </header>
         <main>
-           
+            <section class="service-grid">                
+                <div class="service-button" onclick="toggleDetails('electrical-details')">
+                  <video autoplay muted loop playsinline class="button-video">
+                    <source src="videos/electrical.mp4" type="video/mp4">
+                  </video>
+                  <div class="caption" id="captionEletrico">Serviços Elétricos</div>
+                </div>            
+                
+                <div class="service-button" onclick="toggleDetails('hydraulic-details')">
+                 <video autoplay muted loop playsinline class="button-video"> 
+                    <source src="videos/hidra.mp4" type="video/mp4">
+                 </video> 
+                  <div class="caption" id="captionHidra"></div>
+                </div>            
+                
+                <div class="service-button" onclick="toggleDetails('gn-glp-details')">
+                  <video autoplay muted loop playsinline class="button-video">
+                    <source src="videos/fogao.mp4" type="video/mp4">
+                  </video>
+                  <div class="caption">Conversão GN/GLP</div>
+                </div>
+            
+                <!-- Adicione os outros botões aqui seguindo o mesmo padrão -->
+              </section>
+            
+              <!-- Hidden information -->
+              <section id="electrical-details" class="service-details hidden">
+                <h3 id="servicosEletricos"></h3>
+                <ul id="servicosEletricosList">                    
+                </ul>
+              </section>
+            
+              <section id="hydraulic-details" class="service-details hidden">
+                <h3 id="hidraServices"></h3>
+                <ul id="hidraServiceList">                  
+                </ul>
+              </section>
+            
+              <section id="gn-glp-details" class="service-details hidden">
+                <h3>Conversão GN/GLP</h3>
+                <ul>
+                  <li>Conversão de fogões e aquecedores</li>
+                  <li>Testes de estanqueidade</li>
+                  <li>Instalação de reguladores e mangueiras</li>
+                </ul>
+              </section>        
+                
             
 
 
@@ -79,6 +127,5 @@
                 <button id= "servicesFooter"onclick="location.href='services.html'"></button>         
             </div>
         </footer>
-    </body>
-    <script src="scripts/base.js" defer></script>
+    </body>    
 </html>

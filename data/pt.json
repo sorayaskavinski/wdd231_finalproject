@@ -30,5 +30,27 @@
   "aboutProfessional": "Sobre o Profissional",
   "aboutProfessionalText1": "À frente da Turbo Manutenções está um profissional apaixonado pelo que faz. Com um olhar cuidadoso e um compromisso inegociável com a qualidade, cada serviço é realizado com carinho, organização e atenção aos mínimos detalhes.",
   "aboutProfessionalText2": "Ele possui diversos certificados emitidos pelo SENAI, e está sempre em busca de aperfeiçoamento. Atualmente, cursa Especialista em Elétrica pela Obramax e Gasista pelo SENAI, fortalecendo ainda mais sua capacidade de oferecer serviços especializados e seguros.",
-  "aboutProfessionalText3": "Seu diferencial vai além da técnica: ele busca constantemente inovar, escolhe os materiais com rigor e faz questão de entregar não apenas um trabalho bem feito, mas também a confiança de quem cuida da sua casa como se fosse a própria."
+  "aboutProfessionalText3": "Seu diferencial vai além da técnica: ele busca constantemente inovar, escolhe os materiais com rigor e faz questão de entregar não apenas um trabalho bem feito, mas também a confiança de quem cuida da sua casa como se fosse a própria.",
+  "captionEletrico": "Serviços Elétricos",
+  "servicosEletricos": "Serviços Elétricos",
+  "servicosEletricosList": [
+    "Instalação de tomadas e interruptores",    
+    "Instalação de luminárias",
+    "Instalação de ventiladores de teto",
+    "Instalação de chuveiros",
+    "Manutenção em fiação",    
+    "Troca de disjuntores",
+    "Inspeções técnicas"],
+  "captionHidra": "Serviços Hidráulicos",
+  "hidraServices": "Serviços Hidráulicos",
+  "hidraServiceList": [
+    "Conserto de vazamentos",
+    "Instalação de torneiras",
+    "Instalação de filtro de água",
+    "Instalação de Máquina de lavar",
+    "Manutenção de registros",
+    "Desentupimentos simples",
+    "Troca de bóia de caixa d'água",
+    "Limpeza de caixa d'água"]
+
 }

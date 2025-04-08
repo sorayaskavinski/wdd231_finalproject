@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
   });
 
-// Função segura para atualizar elementos se existirem
+// Function to Update elements as they are pushed
 function setText(id, text) {
     const el = document.getElementById(id);
     if (el) el.textContent = text;
   }
   
-  // Carrega o idioma
+  // Language function
   function loadLanguage(lang) {
     fetch(`data/${lang}.json`)
       .then(response => response.json())
@@ -63,14 +63,37 @@ function setText(id, text) {
         setText("aboutProfessionalText2", data.aboutProfessionalText2);
         setText("aboutProfessionalText3", data.aboutProfessionalText3);
   
-        // Futuras páginas: Contact, Services...
-        // Exemplo:
-        // setText("contactTitle", data.contactTitle);
+        //Services Page
+        setText("servicosEletricos", data.servicosEletricos);       
+        setText("captionEletrico", data.captionEletrico);        
+        const servicosEletricosList = document.getElementById("servicosEletricosList");
+        if (servicosEletricosList && data.servicosEletricosList) {
+          servicosEletricosList.innerHTML = "";
+          data.servicosEletricosList.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            servicosEletricosList.appendChild(li);
+          });
+        }
+
+        setText("hidraServices", data.hidraServices);
+        setText("captionHidra", data.captionHidra);       
+        const hidraServiceList = document.getElementById("hidraServiceList");
+        if (hidraServiceList && data.hidraServiceList) {
+          servicosEletricosList.innerHTML = "";
+          data.hidraServiceList.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            hidraServiceList.appendChild(li);
+          });
+        }
+
+
       })
       .catch(error => console.error("Erro ao carregar idioma:", error));
   }
   
-  // Clique nas bandeiras
+  
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.id; // pt, en, etc.
@@ -79,7 +102,7 @@ function setText(id, text) {
     });
   });
   
-  // Idioma padrão ao carregar a página
+  // Pattern Language
   window.addEventListener("load", () => {
     const savedLang = localStorage.getItem("lang") || "en";
     loadLanguage(savedLang);
