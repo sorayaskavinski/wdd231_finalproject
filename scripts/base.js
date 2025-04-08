@@ -80,7 +80,7 @@ function setText(id, text) {
         setText("captionHidra", data.captionHidra);       
         const hidraServiceList = document.getElementById("hidraServiceList");
         if (hidraServiceList && data.hidraServiceList) {
-          servicosEletricosList.innerHTML = "";
+          hidraServiceList.innerHTML = "";
           data.hidraServiceList.forEach(item => {
             const li = document.createElement("li");
             li.textContent = item;
