@@ -51,6 +51,15 @@
     "Manutenção de registros",
     "Desentupimentos simples",
     "Troca de bóia de caixa d'água",
-    "Limpeza de caixa d'água"]
+    "Limpeza de caixa d'água"],
+  "captionStove": "Conversão GN/GLP",
+  "fogaoName": "Conversão de Gás Natural para de Cozinha e vice-versa",
+  "fogaoList": [
+    "Instalação de fogão",
+    "Manutenção de fogão",
+    "Conversão de Gás Natural para GLP e vice-versa",
+    "Testes de estanqueidade",
+    "Instalação de válvula e mangueiras",
+    "Mudança de local de válvula de abertura de fogão"]
 
 }

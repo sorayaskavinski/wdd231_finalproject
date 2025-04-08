@@ -51,5 +51,14 @@
     "Record maintenance",
     "Simple unclogging",
     "Water tank float replacement",
-    "Water tank cleaning"]
+    "Water tank cleaning"],
+  "captionStove": "Conversion Natural Gas to LGP",
+  "fogaoName": "Conversion from Natural Gas to LGP",
+  "fogaoList": [
+    "Stove installation",
+    "Stove maintenance",
+    "Conversion from natural gas to LPG and vice versa",
+    "Leak testing",
+    "Valve and hose installation",
+    "Changing the location of the stove opening valve"]
 }

@@ -88,6 +88,19 @@ function setText(id, text) {
           });
         }
 
+        setText("captionStove", data.captionStove);
+        setText("fogaoName", data.fogaoName);
+        const fogaoList = document.getElementById("fogaoList");
+        if (fogaoList && data.fogaoList) {
+          fogaoList.innerHTML = "";
+          data.fogaoList.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            fogaoList.appendChild(li);
+          });
+        }
+
+
 
       })
       .catch(error => console.error("Erro ao carregar idioma:", error));
