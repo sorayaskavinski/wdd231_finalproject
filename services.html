@@ -44,31 +44,31 @@
         </header>
         <main>
             <section class="service-grid">                
-                <div class="service-button" onclick="toggleDetails('electrical-details')">
+                <div class="service-button" data-toggle="service" data-target="electrical-details">
                     <video autoplay muted loop playsinline class="button-video">
                         <source src="videos/electrical.mp4" type="video/mp4">
                     </video>
                     <div class="caption" id="captionEletrico">Serviços Elétricos</div>
                 </div> 
                 
-                <div class="service-button" onclick="toggleDetails('gn-glp-details')">                    
+                <div class="service-button" data-toggle="service" data-target="gn-glp-details">                                     
                     <img src="images/gn-glp.webp" alt="conversao fogao">                  
                     <div class="caption" id="captionStove"></div>
                 </div>              
                 
-                <div class="service-button" onclick="toggleDetails('hydraulic-details')">
+                <div class="service-button" data-toggle="service" data-target="hydraulic-details">                
                     <video autoplay muted loop playsinline class="button-video"> 
                         <source src="videos/hidra.mp4" type="video/mp4">
                     </video> 
                     <div class="caption" id="captionHidra"></div>
                 </div>            
                 
-                <div class="service-button" onclick="toggleDetails('assembly-details')">                    
+                <div class="service-button" data-toggle="service" data-target="assembly-details">                                    
                     <img src="images/" alt="Montagem Moveis">                   
                     <div class="caption" id="captionAssembly"></div>
                 </div>  
                 
-                <!-- Adicione os outros botões aqui seguindo o mesmo padrão -->
+                <!-- I'll put more buttons I didn't have time to make more cards -->
               </section>
             
               <!-- Hidden information -->
@@ -88,13 +88,8 @@
                 <h3 id="hidraServices"></h3>
                 <ul id="hidraServiceList">                  
                 </ul>
-              </section>
-            
-                    
-                
-            
-
-
+              </section>         
+     
         </main>
         <footer>
             <div id="first-footer-info">

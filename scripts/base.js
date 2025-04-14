@@ -1,125 +1,94 @@
-// Lastmodified and menu button function
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-  
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
-    }
-  
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
-  });
+// Last modified and menu button function
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-// Function to Update elements as they are pushed
-function setText(id, text) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = text;
-  }
-  
-  // Language function
-  function loadLanguage(lang) {
-    fetch(`data/${lang}.json`)
-      .then(response => response.json())
-      .then(data => {
-        // Base Header & Footer
-        setText("siteTitle", data.siteTitle);
-        setText("home", data.home);
-        setText("aboutus", data.aboutus);
-        setText("servicesBtn", data.servicesBtn);
-        setText("contact", data.contact);
-  
-        setText("titleFooter", data.titleFooter);
-        setText("moreInfo", data.moreInfo);
-        setText("contactFooter", data.contactFooter);
-        setText("servicesFooter", data.servicesFooter);
-        setText("lastTitle", data.lastTitle);
-        setText("regionBtn", data.regionBtn);
-        setText("contactBtn", data.contactBtn);
-  
-        // Home Page
-        setText("mainServices", data.mainServices);
-  
-        const serviceList = document.getElementById("serviceList");
-        if (serviceList && data.serviceList) {
-          serviceList.innerHTML = "";
-          data.serviceList.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            serviceList.appendChild(li);
-          });
-        }
-  
-        // About Page
-        setText("aboutCompany", data.aboutCompany);
-        setText("aboutCompanyText1", data.aboutCompanyText1);
-        setText("aboutCompanyText2", data.aboutCompanyText2);
-        setText("aboutCompanyText3", data.aboutCompanyText3);
-  
-        setText("aboutProfessional", data.aboutProfessional);
-        setText("aboutProfessionalText1", data.aboutProfessionalText1);
-        setText("aboutProfessionalText2", data.aboutProfessionalText2);
-        setText("aboutProfessionalText3", data.aboutProfessionalText3);
-  
-        //Services Page
-        setText("servicosEletricos", data.servicosEletricos);       
-        setText("captionEletrico", data.captionEletrico);        
-        const servicosEletricosList = document.getElementById("servicosEletricosList");
-        if (servicosEletricosList && data.servicosEletricosList) {
-          servicosEletricosList.innerHTML = "";
-          data.servicosEletricosList.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            servicosEletricosList.appendChild(li);
-          });
-        }
-
-        setText("hidraServices", data.hidraServices);
-        setText("captionHidra", data.captionHidra);       
-        const hidraServiceList = document.getElementById("hidraServiceList");
-        if (hidraServiceList && data.hidraServiceList) {
-          hidraServiceList.innerHTML = "";
-          data.hidraServiceList.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            hidraServiceList.appendChild(li);
-          });
-        }
-
-        setText("captionStove", data.captionStove);
-        setText("fogaoName", data.fogaoName);
-        const fogaoList = document.getElementById("fogaoList");
-        if (fogaoList && data.fogaoList) {
-          fogaoList.innerHTML = "";
-          data.fogaoList.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            fogaoList.appendChild(li);
-          });
-        }
-
-
-
-      })
-      .catch(error => console.error("Erro ao carregar idioma:", error));
-  }
-  
-  
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const lang = btn.id; // pt, en, etc.
-      localStorage.setItem("lang", lang); // salva idioma escolhido
-      loadLanguage(lang);
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
-  });
-  
-  // Pattern Language
-  window.addEventListener("load", () => {
-    const savedLang = localStorage.getItem("lang") || "en";
-    loadLanguage(savedLang);
-  });
-  
+  }
 
+  const yearEl = document.getElementById("year");
+  const modifiedEl = document.getElementById("lastModified");
 
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (modifiedEl) modifiedEl.textContent = "Last modified: " + document.lastModified;
+});
+
+// Function to safely set text
+function setText(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
+}
+
+// Load language data dynamically
+async function loadLanguage(lang) {
+  try {
+    const response = await fetch(`data/${lang}.json`);
+    const data = await response.json();
+
+    // Header & Footer
+    const headerFooterKeys = [
+      "siteTitle", "home", "aboutus", "servicesBtn", "contact",
+      "titleFooter", "moreInfo", "contactFooter", "servicesFooter",
+      "lastTitle", "regionBtn", "contactBtn"
+    ];
+    headerFooterKeys.forEach(key => setText(key, data[key]));
+
+    // Home Page
+    setText("mainServices", data.mainServices);
+    updateList("serviceList", data.serviceList);
+
+    // About Page
+    const aboutKeys = [
+      "aboutCompany", "aboutCompanyText1", "aboutCompanyText2", "aboutCompanyText3",
+      "aboutProfessional", "aboutProfessionalText1", "aboutProfessionalText2", "aboutProfessionalText3"
+    ];
+    aboutKeys.forEach(key => setText(key, data[key]));
+
+    // Services Page
+    setText("servicosEletricos", data.servicosEletricos);
+    setText("captionEletrico", data.captionEletrico);
+    updateList("servicosEletricosList", data.servicosEletricosList);
+
+    setText("hidraServices", data.hidraServices);
+    setText("captionHidra", data.captionHidra);
+    updateList("hidraServiceList", data.hidraServiceList);
+
+    setText("captionStove", data.captionStove);
+    setText("fogaoName", data.fogaoName);
+    updateList("fogaoList", data.fogaoList);
+
+  } catch (error) {
+    console.error("Erro ao carregar idioma:", error);
+  }
+}
+
+// Helper to update a list from array
+function updateList(id, items) {
+  const list = document.getElementById(id);
+  if (list && Array.isArray(items)) {
+    list.innerHTML = "";
+    items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  }
+}
+
+// Language button click
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.id;
+    localStorage.setItem("lang", lang);
+    loadLanguage(lang);
+  });
+});
+
+// Load saved or default language
+window.addEventListener("load", () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  loadLanguage(savedLang);
+});
