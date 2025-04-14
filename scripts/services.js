@@ -1,7 +1,7 @@
 let currentVisibleId = null;
 
 // Alternates the visibility
-function toggleDetails(id) {
+function toggleDetails(id) {   //TOGGLE VISIBILITY -- VIDEO
   const selected = document.getElementById(id);
 
   if (!selected) return;
@@ -17,7 +17,7 @@ function toggleDetails(id) {
     allDetails.forEach(section => section.classList.add('hidden'));
 
     selected.classList.remove('hidden');
-    selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    selected.scrollIntoView({ behavior: 'smooth', block: 'start' }); // DOM - VIDEO
     currentVisibleId = id;
   }
 }

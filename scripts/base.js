@@ -25,7 +25,7 @@ function setText(id, text) {
 // Load language data dynamically
 async function loadLanguage(lang) {
   try {
-    const response = await fetch(`data/${lang}.json`);
+    const response = await fetch(`data/${lang}.json`); //API/DATA INTEGRATION -- VIDEO
     const data = await response.json();
 
     // Header & Footer
@@ -37,7 +37,7 @@ async function loadLanguage(lang) {
     headerFooterKeys.forEach(key => setText(key, data[key]));
 
     // Home Page
-    setText("mainServices", data.mainServices);
+    setText("mainServices", data.mainServices); //--DOM VIDEO
     updateList("serviceList", data.serviceList);
 
     // About Page
@@ -89,6 +89,6 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
 
 // Load saved or default language
 window.addEventListener("load", () => {
-  const savedLang = localStorage.getItem("lang") || "en";
+  const savedLang = localStorage.getItem("lang") || "en"; //LOCALSTORAGE -- VIDEO
   loadLanguage(savedLang);
 });

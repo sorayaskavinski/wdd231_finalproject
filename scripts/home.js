@@ -7,7 +7,7 @@ const mapContainer = document.getElementById('btn-container');
   });
 
 // carousel pictures
-fetch('data/carousel-images.json')
+fetch('data/carousel-images.json') //API-DATA INTEGRATION -- VIDEO
   .then(respose => respose.json())
   .then(images => {
     const carousel = document.getElementById('carousel');
