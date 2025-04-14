@@ -23,6 +23,7 @@
           "video[playsinline]"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
